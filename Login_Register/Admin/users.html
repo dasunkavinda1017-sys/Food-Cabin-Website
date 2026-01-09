@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Manage Users | Admin Panel</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+
+    <link rel="stylesheet" href="users.css">
+</head>
+<body>
+
+<div class="layout">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <h2 class="logo">AdManager</h2>
+
+        <nav>
+            <a href="#"><span class="material-symbols-outlined">dashboard</span> Dashboard</a>
+            <a href="#" class="active"><span class="material-symbols-outlined">group</span> Users</a>
+            <a href="#"><span class="material-symbols-outlined">campaign</span> Ads</a>
+              <li><a href="reports.html"> <span class="material-symbols-outlined">group</span> Users</a></li>
+            <a href="#"><span class="material-symbols-outlined">settings</span> Settings</a>
+        </nav>
+
+        <button class="logout">
+            <span class="material-symbols-outlined">logout</span> Sign Out
+        </button>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="content">
+
+        <!-- Header -->
+        <header class="topbar">
+            <input type="text" placeholder="Search users...">
+            <div class="icons">
+                <span class="material-symbols-outlined">notifications</span>
+                <span class="material-symbols-outlined">account_circle</span>
+            </div>
+        </header>
+
+        <section class="page-header">
+            <h1>Manage Users</h1>
+            <p>View and manage all registered users</p>
+        </section>
+
+        <!-- Stats -->
+        <section class="stats">
+            <div class="stat-card">
+                <h3>Total Users</h3>
+                <p>24,592</p>
+            </div>
+            <div class="stat-card">
+                <h3>Active Users</h3>
+                <p>23,800</p>
+            </div>
+            <div class="stat-card danger">
+                <h3>Banned Users</h3>
+                <p>792</p>
+            </div>
+        </section>
+
+        <!-- Users Table -->
+        <section class="table-section">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>User ID</th>
+                        <th>Email</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>John Doe</td>
+                        <td>#USR-8821</td>
+                        <td>john.doe@example.com</td>
+                        <td><span class="badge active">Active</span></td>
+                        <td>
+                            <button class="icon-btn warn">
+                                <span class="material-symbols-outlined">block</span>
+                            </button>
+                            <button class="icon-btn danger" onclick="confirmDelete()">
+                                <span class="material-symbols-outlined">delete</span>
+                            </button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Alice Smith</td>
+                        <td>#USR-2291</td>
+                        <td>alice.smith@web.net</td>
+                        <td><span class="badge banned">Banned</span></td>
+                        <td>
+                            <button class="icon-btn success">
+                                <span class="material-symbols-outlined">check_circle</span>
+                            </button>
+                            <button class="icon-btn danger" onclick="confirmDelete()">
+                                <span class="material-symbols-outlined">delete</span>
+                            </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+    </main>
+</div>
+
+<script src="users.js"></script>
+</body>
+</html>

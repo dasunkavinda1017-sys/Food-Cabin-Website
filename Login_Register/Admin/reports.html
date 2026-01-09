@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Reported Ads - Admin</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="reports.css">
+</head>
+<body>
+
+<div class="layout">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <h2 class="logo">AdManager</h2>
+
+        <ul class="menu">
+            <li><span class="material-symbols-outlined">dashboard</span> Dashboard</li>
+            <li><a href="users.html"> <span class="material-symbols-outlined">group</span> Users</a></li>
+            <li><span class="material-symbols-outlined">campaign</span> Ads</li>
+            <li class="active"><span class="material-symbols-outlined">flag</span> Reported Ads</li>
+            <li><span class="material-symbols-outlined">settings</span> Settings</li>
+        </ul>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="content">
+
+        <!-- Top Bar -->
+        <header class="topbar">
+            <h1>Reported Advertisements</h1>
+            <button class="export-btn">
+                <span class="material-symbols-outlined">download</span>
+                Export CSV
+            </button>
+        </header>
+
+        <!-- Stats -->
+        <section class="stats">
+            <div class="card">
+                <p>Pending Reports</p>
+                <h2>14</h2>
+            </div>
+            <div class="card">
+                <p>Reviewed Today</p>
+                <h2>28</h2>
+            </div>
+            <div class="card">
+                <p>Total Reports</p>
+                <h2>1052</h2>
+            </div>
+        </section>
+
+        <!-- Table -->
+        <section class="table-section">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Ad</th>
+                        <th>Reason</th>
+                        <th>Reported By</th>
+                        <th>Date</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Vintage Rolex</td>
+                        <td>Counterfeit</td>
+                        <td>John Doe</td>
+                        <td>2 mins ago</td>
+                        <td class="pending">Pending</td>
+                        <td>
+                            <button class="approve">✔</button>
+                            <button class="delete">✖</button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Crypto Scheme</td>
+                        <td>Scam</td>
+                        <td>Alice Smith</td>
+                        <td>15 mins ago</td>
+                        <td class="pending">Pending</td>
+                        <td>
+                            <button class="approve">✔</button>
+                            <button class="delete">✖</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+    </main>
+
+</div>
+
+<script src="reports.js"></script>
+</body>
+</html>

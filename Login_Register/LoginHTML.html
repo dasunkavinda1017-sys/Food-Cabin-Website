@@ -1,0 +1,50 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login Page</title>
+<link rel="stylesheet" href="LoginCss.css">
+</head>
+<body>
+    <!-- background images slider -->
+    <div class="background-slider">
+        <img src="image/image1.jpeg" class="slide active">
+        <img src="image/image2.jpg" class="slide">
+        <img src="image/image3.jpg" class="slide">
+        <img src="image/image4.jpg" class="slide">
+        <img src="image/image5.jpg" class="slide">
+        <img src="image/image2.jpg" class="slide">
+        <img src="image/image1.jpg"class="slide">
+    </div>
+
+    
+    <!-- login container floating center -->
+    <div class="login-container">
+        <div class="logo">
+            <span>⚡</span>
+            <h2>Nexus Commerce</h2>
+        </div>
+
+        <form action="Loginphp.php" method="POST" class="login-form">
+            <div class="input-group">
+                <label>Email or Username</label>
+                <input type="text" name="username" placeholder="john@example.com" required>
+            </div>
+
+            <div class="input-group">
+                <label>Password</label>
+                <input type="password" name="password" placeholder="••••••••" required>
+            </div>
+
+            <button type="submit" class="login-btn">Log In</button>
+
+            <p class="register-link">
+                New here? <a href="RegisterHTML.html">Create an account</a>
+            </p>
+        </form>
+    </div>
+
+    <script src="Loginjs.js"></script>
+</body>
+</html>

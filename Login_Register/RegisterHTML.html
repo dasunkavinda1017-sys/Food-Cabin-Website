@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>User Registration</title>
+<link rel="stylesheet" href="RegisterCSS.css">
+</head>
+<body>
+    <!-- Background image slider -->
+    <div class="background-slider">
+         <img src="image/image1.jpeg" class="slide active">
+        <img src="image/image2.jpg" class="slide">
+        <img src="image/image3.jpg" class="slide">
+        <img src="image/image4.jpg" class="slide">
+        <img src="image/image5.jpg" class="slide">
+        <img src="image/image2.jpg" class="slide">
+        <img src="image/image1.jpg"class="slide">
+    </div>
+
+    <!-- Registration container center overlay -->
+    <div class="register-container">
+        <div class="logo">
+            <span>⚡</span>
+            <h2>Nexus Commerce</h2>
+        </div>
+
+        <form action="RegisterPHP.php" method="POST" class="register-form">
+            <div class="input-group">
+                <label>Full Name</label>
+                <input type="text" name="fullname" placeholder="John Doe" required>
+            </div>
+            <div class="input-group">
+                <label>Email</label>
+                <input type="email" name="email" placeholder="name@example.com" required>
+            </div>
+            <div class="input-group">
+                <label>Password</label>
+                <input type="password" name="password" placeholder="••••••••" required>
+            </div>
+            <div class="input-group">
+                <label>Confirm Password</label>
+                <input type="password" name="confirm_password" placeholder="••••••••" required>
+            </div>
+            <div class="input-group checkbox-group">
+                <input type="checkbox" name="terms" id="terms" required>
+                <label for="terms">I agree to the Terms & Privacy Policy</label>
+            </div>
+            <button type="submit" class="register-btn">Create Account</button>
+        </form>
+
+        <p class="login-link">
+            Already have an account? <a href="LoginHTML.html">Log In</a>
+        </p>
+    </div>
+
+    <script src="RegisterJS.js"></script>
+</body>
+</html>

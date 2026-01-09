@@ -1,0 +1,210 @@
+/* Reset some basics */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: #f6f7f8;
+    color: #1f2937;
+    min-height: 100vh;
+}
+
+/* Header */
+.header {
+    position: sticky;
+    top: 0;
+    background-color: rgba(246, 247, 248, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid #e5e7eb;
+    z-index: 100;
+    padding: 10px;
+}
+
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.profile {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border: 2px solid #137fec;
+    border-radius: 50%;
+    overflow: hidden;
+    background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAwGYuBla0cTXakAW9AFGjE_nt4f9QXRHBKVGz_9K1g0k2xhxzQeBH48SFyK-Uhckbvekmw3wUuiMgI-8vHtAo9OfxqF4QxsAaCT9Dz93_aaI59sDsy8L7zxsMiTI5DomUnv3LTZ7TfrF4xVaGZMcCtjuc4ZutTl9hIteHrZnNOdu-HpwP0KZlM6wX183Vf3JLUaSgJqgk2n9e2SPXKptgbC5RtKv8k1mPkUWEr6D9O9rPQ_0eDn_tBmcVkxs_g1onZHIC4uKUnig');
+    background-size: cover;
+    background-position: center;
+}
+
+.status-dot {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 12px;
+    height: 12px;
+    background-color: #22c55e;
+    border: 2px solid white;
+    border-radius: 50%;
+}
+
+/* Search */
+.search-bar {
+    margin-top: 10px;
+    position: relative;
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 12px 12px 12px 40px;
+    border-radius: 24px;
+    border: none;
+    font-size: 14px;
+}
+
+.search-bar::before {
+    content: '🔍';
+    position: absolute;
+    left: 12px;
+    top: 12px;
+}
+
+/* Categories */
+.categories {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    padding: 10px 0;
+}
+
+.categories button {
+    padding: 5px 15px;
+    border-radius: 24px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.categories button.active {
+    background-color: #137fec;
+    color: white;
+}
+
+/* Product List */
+.product-list {
+     padding: 10px;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(2, 1fr); /* Default 2 columns for mobile */
+}
+/* Tablet */
+@media (min-width: 768px) {
+    .product-list {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* Desktop */
+@media (min-width: 1200px) {
+    .product-list {
+        grid-template-columns: repeat(6, 1fr);
+    }
+}
+
+
+.product-card {
+    background-color: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.product-image {
+    width: 100%;
+    padding-top: 75%; /* 4:3 aspect ratio */
+    background-size: cover;
+    background-position: center;
+}
+
+.product-info {
+    padding: 10px;
+}
+
+.product-info h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.product-info p {
+    font-size: 14px;
+    color: #6b7280;
+}
+
+.price {
+    font-weight: bold;
+    color: #137fec;
+    display: block;
+    margin: 5px 0;
+}
+
+.buy-btn {
+    width: 100%;
+    background-color: #137fec;
+    color: white;
+    padding: 10px;
+    border-radius: 12px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Bottom Nav */
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(255,255,255,0.95);
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+    border-top: 1px solid #e5e7eb;
+}
+
+.bottom-nav a {
+    font-size: 12px;
+    color: #9ca3af;
+    text-decoration: none;
+}
+
+.bottom-nav a.active {
+    color: #137fec;
+}
+
+
+ 
+.product-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.report-icon {
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.report-box textarea {
+    width: 100%;
+    margin-top: 6px;
+}
+
+.report-box button {
+    margin-top: 5px;
+    padding: 5px 10px;
+    color: #f7f7f7;
+    background-color: red;
+    font-weight: 3;
+}
